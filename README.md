@@ -1,6 +1,5 @@
 # Exchangerate
 
-Assignment
 The idea is to create an interactive web application that allows users to display exchange rates over
 time, using https://exchangeratesapi.io/ (Free 250 Monthly Requests).
 
