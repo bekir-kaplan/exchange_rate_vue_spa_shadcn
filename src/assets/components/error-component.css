@@ -1,0 +1,19 @@
+.error-container {
+  @apply text-center py-8 fixed bottom-0 left-0 z-50 w-full bg-red-500 shadow-2xl shadow-slate-800;
+}
+
+.error-close-button {
+  @apply absolute top-0 right-0 p-2 cursor-pointer w-10;
+}
+
+.error-close-icon {
+  @apply text-slate-100 hover:text-red-900;
+}
+
+.error-title {
+  @apply text-xl font-bold text-gray-100;
+}
+
+.error-message {
+  @apply mt-2 text-gray-100;
+}

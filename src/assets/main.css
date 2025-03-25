@@ -1,0 +1,17 @@
+@import '@/assets/base.css';
+
+.app-main-container {
+  @apply flex flex-col items-center justify-center w-full;
+}
+
+.card-view-container {
+  @apply shadow-xl rounded-2xl;
+}
+
+.card-view-title {
+  @apply text-2xl font-semibold text-center;
+}
+
+.card-view-content {
+  @apply space-y-4;
+}

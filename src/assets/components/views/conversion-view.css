@@ -1,0 +1,23 @@
+.conversion-view-label {
+  @apply block text-sm font-medium mb-1;
+}
+
+.conversion-view-currency-container {
+  @apply grid gap-2 grid-cols-1 w-full sm:grid-cols-2;
+}
+
+.conversion-view-convert-btn {
+  @apply w-full;
+}
+
+.conversion-view-result {
+  @apply text-center mt-4;
+}
+
+.conversion-view-result-text {
+  @apply text-lg font-medium;
+}
+
+.conversion-view-result-value {
+  @apply text-blue-600;
+}
