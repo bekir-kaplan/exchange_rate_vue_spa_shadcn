@@ -24,6 +24,8 @@ const chart = {
     chartData.sort((a, b) => new Date(a.year).getTime() - new Date(b.year).getTime())
     return chartData
   },
+
+  // Utility function to pick keys from an object to show on chart graphic
   pickKeys: (obj: Record<string, any>, keys: string[]) => {
     return keys.reduce((result: Record<string, any>, key: string) => {
       if (key in obj) {

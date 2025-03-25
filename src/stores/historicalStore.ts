@@ -14,13 +14,14 @@ import { useHomeStore } from './homeStore'
 
 export const useHistoricalStore = defineStore('historicalStore', () => {
   const homeStore = useHomeStore()
-  const baseCurrency = computed(() => homeStore.baseCurrency)
-  const targetCurrency = computed(() => homeStore.targetCurrency)
   const historicalRates = ref<Record<string, any>[]>([])
   const chartCategories = ref<string[]>([])
   const historicalRatesMap = ref(new Map<string, IFinMapExchangeRate>())
   const loading = ref(false)
   const error = ref<Error | null>(null)
+
+  const baseCurrency = computed(() => homeStore.baseCurrency)
+  const targetCurrency = computed(() => homeStore.targetCurrency)
 
   const setHistoricalRates = () => {
     historicalRates.value =
@@ -59,7 +60,7 @@ export const useHistoricalStore = defineStore('historicalStore', () => {
     const promises = dates.map((date) =>
       fetchHistoricalRates({
         date: date,
-        base: 'EUR',
+        base: baseCurrency.value?.value,
       }),
     )
     await Promise.all(promises)

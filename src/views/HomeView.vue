@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import ConversionView from './conversion/ConversionView.vue'
-import HistoricalRates from './historical-rates/HistoricalRates.vue'
+import ConversionView from '@/views/ConversionView.vue'
+import HistoricalRates from '@/views/HistoricalRates.vue'
 import { useHomeStore } from '@/stores/homeStore'
 
 const homeStore = useHomeStore()
@@ -16,5 +16,5 @@ const { showHistoricalData } = storeToRefs(homeStore)
 </template>
 
 <style scoped>
-@import '@/assets/components/views/home-view.css';
+@import '@/assets/views/home-view.css';
 </style>

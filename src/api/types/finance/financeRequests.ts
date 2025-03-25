@@ -22,7 +22,7 @@ export interface IFinLatestRatesRequest {
 
 export interface IFinHistoricalRatesRequest {
   date: IDateString
-  base: string
+  base?: string
   symbols?: string[]
 }
 

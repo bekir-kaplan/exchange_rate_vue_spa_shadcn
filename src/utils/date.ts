@@ -3,7 +3,6 @@ import type {
   UtilDateFormatW3CDateTimeResult,
 } from '@/types/utils.types'
 
-// TODO: Use this for every date time conversation
 const defaultDateFormat: Intl.DateTimeFormatOptions = {
   year: 'numeric',
   month: 'numeric',
@@ -31,13 +30,8 @@ const date = {
     if (timestamp !== undefined && timestamp !== null) {
       const date = new Date(timestamp)
 
-      // Format the date using Intl.DateTimeFormat
       formattedDate = new Intl.DateTimeFormat(locale, dateFormat).format(date)
-
-      // Format the time using Intl.DateTimeFormat
       formattedTime = new Intl.DateTimeFormat(locale, timeFormat).format(date)
-
-      // Ensure the date uses the correct separator (replacing default separators)
       formattedDate = formattedDate.replace(/[/-]/g, separator)
     }
 

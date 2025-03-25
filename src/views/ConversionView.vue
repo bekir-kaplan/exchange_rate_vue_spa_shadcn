@@ -10,9 +10,7 @@ import type { IPropsSearchCombobox } from '@/types/components.types'
 import { useLatestStore } from '@/stores/latestStore'
 import { ArrowLeftRightIcon } from 'lucide-vue-next'
 import { useHomeStore } from '@/stores/homeStore'
-import { useFinance } from '@/composables/useFinance'
 
-const finance = useFinance()
 const symbolsStore = useSymbolsStore()
 const latestStore = useLatestStore()
 const homeStore = useHomeStore()
@@ -45,7 +43,6 @@ const convertCurrency = async () => {
     base: baseCurrency.value?.value || '',
   })
 
-  debugger
   if (!latestError.value) {
     if (latestRates.value?.rates) {
       Object.keys(latestRates.value.rates).forEach((rate) => {
@@ -139,5 +136,5 @@ const handleSwitchClick = () => {
 </template>
 
 <style scoped>
-@import '@/assets/components/views/conversion-view.css';
+@import '@/assets/views/conversion-view.css';
 </style>
